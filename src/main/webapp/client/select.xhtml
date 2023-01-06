@@ -50,16 +50,10 @@
                                 </f:facet>
                                 <h:outputText value="#{item.person.nic}"/>
                             </p:column>
+
                             <p:column>
                                 <f:facet name="header">
-                                    <h:outputText value="Religion"/>
-                                </f:facet>
-                                <h:outputText value="#{item.person.religion.name}">
-                                </h:outputText>
-                            </p:column>
-                            <p:column>
-                                <f:facet name="header">
-                                    <h:outputText value="Ethnicity"/>
+                                    <h:outputText value="Patient's Hometown"/>
                                 </f:facet>
                                 <h:outputText value="#{item.person.ethinicGroup.name}"/>
                             </p:column>
@@ -72,22 +66,17 @@
                             </p:column>
                             <p:column>
                                 <f:facet name="header">
-                                    <h:outputText value="Citizenship"/>
+                                    <h:outputText value="Clerked Student"/>
                                 </f:facet>
-                                <h:outputText value="#{item.person.citizenship.name}"/>
+                                <h:outputText value="#{item.person.ssNumber}"/>
                             </p:column>
                             <p:column>
                                 <f:facet name="header">
-                                    <h:outputText value="Address"/>
+                                    <h:outputText value="Presenting Complaint"/>
                                 </f:facet>
                                 <h:outputText value="#{item.person.address}"/>
                             </p:column>
-                            <p:column>
-                                <f:facet name="header">
-                                    <h:outputText value="Phn"/>
-                                </f:facet>
-                                <h:outputText value="#{item.phn}"/>
-                            </p:column>
+
                             <p:column>
                                 <f:facet name="header">
                                     <h:outputText value="Actions"/>
