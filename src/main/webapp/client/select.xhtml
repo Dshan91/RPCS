@@ -12,7 +12,7 @@
 
             <ui:define name="content">
                 
-                <p:panel header="Select Client" style="height: 100%; text-align: center;" >
+                <p:panel header="Select Case" style="height: 100%; text-align: center;" >
                     
                     
                     <h:form>
@@ -25,58 +25,52 @@
                                 </f:facet>
                                 <h:outputText value="#{item.person.name}"/>
                             </p:column>
+
                             <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Age"/>
+                                </f:facet>
+                                <h:outputText value="#{item.person.age}">
+                                </h:outputText>
+                            </p:column>     
+                             <p:column>
                                 <f:facet name="header">
                                     <h:outputText value="Gender"/>
                                 </f:facet>
                                 <h:outputText value="#{item.person.sex.name}"/>
+                            </p:column>                           
+                            
+                            <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Patient's Hometown"/>
+                                </f:facet>
+                                <h:outputText value="#{item.person.gnArea.name}"/>
+                            </p:column>                            
+                            
+                           <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Presenting Complaint"/>
+                                </f:facet>
+                                <h:outputText value="#{item.person.address}"/>
                             </p:column>
+                            
+                            
                             <p:column>
                                 <f:facet name="header">
                                     <h:outputText value="PHN"/>
                                 </f:facet>
                                 <h:outputText value="#{item.phn}"/>
                             </p:column>
-                            <p:column>
-                                <f:facet name="header">
-                                    <h:outputText value="Phone No"/>
-                                </f:facet>
-                                <h:outputText value="#{item.person.phone1}">
-                                </h:outputText>
-                            </p:column>
-                            <p:column>
-                                <f:facet name="header">
-                                    <h:outputText value="NIC"/>
-                                </f:facet>
-                                <h:outputText value="#{item.person.nic}"/>
-                            </p:column>
 
-                            <p:column>
-                                <f:facet name="header">
-                                    <h:outputText value="Patient's Hometown"/>
-                                </f:facet>
-                                <h:outputText value="#{item.person.ethinicGroup.name}"/>
-                            </p:column>
-                            <p:column>
-                                <f:facet name="header">
-                                    <h:outputText value="Marietal Status"/>
-                                </f:facet>
-                                <h:outputText value="#{item.person.mariatalStatus.name}">
-                                </h:outputText>
-                            </p:column>
+
+
                             <p:column>
                                 <f:facet name="header">
                                     <h:outputText value="Clerked Student"/>
                                 </f:facet>
                                 <h:outputText value="#{item.person.ssNumber}"/>
                             </p:column>
-                            <p:column>
-                                <f:facet name="header">
-                                    <h:outputText value="Presenting Complaint"/>
-                                </f:facet>
-                                <h:outputText value="#{item.person.address}"/>
-                            </p:column>
-
+ 
                             <p:column>
                                 <f:facet name="header">
                                     <h:outputText value="Actions"/>

@@ -15,6 +15,16 @@
                     
                     <p:panel header="Search by IDs" >
                         <h:panelGrid columns="3" >
+ 
+                            <p:outputLabel value="Clinical Group Number" ></p:outputLabel>
+                            <p:inputText value="#{clientController.searchingDrivingLicenceNo}" placeholder="Eg- 2019/08" autocomplete="off" ></p:inputText>
+                            <p:commandButton ajax="false" class="m-1" value="Search" action="#{clientController.searchByDrivingLicenseNo()}" ></p:commandButton>                            
+
+                            <p:outputLabel value="Student Number" ></p:outputLabel>
+                            <p:inputText value="#{clientController.searchingSsNumber}" placeholder="Eg- MFC/2019/1103"  autocomplete="off" ></p:inputText>
+                            <p:commandButton ajax="false" class="m-1" value="Search" action="#{clientController.searchBySsNo()}" ></p:commandButton> 
+                            
+                            
                             <p:outputLabel value="PHN No" ></p:outputLabel>
                             <p:inputText value="#{clientController.searchingPhn}"  autocomplete="off"  ></p:inputText>
                             <p:commandButton ajax="false" class="m-1" value="Search" action="#{clientController.searchByPhn()}" ></p:commandButton>
@@ -31,12 +41,10 @@
                             <p:inputText value="#{clientController.searchingPhoneNumber}"  autocomplete="off"  ></p:inputText>
                             <p:commandButton ajax="false" class="m-1" value="Search" action="#{clientController.searchByPhoneNumber()}" ></p:commandButton>
                             
-                            <p:outputLabel value="Clinical Group Number" ></p:outputLabel>
-                            <p:inputText value="#{clientController.searchingDrivingLicenceNo}"  autocomplete="off" ></p:inputText>
-                            <p:commandButton ajax="false" class="m-1" value="Search" action="#{clientController.searchByDrivingLicenseNo()}" ></p:commandButton>
+
                             
                             <p:outputLabel value="Patient Number" ></p:outputLabel>
-                            <p:inputText value="#{clientController.searchingPassportNo}"  autocomplete="off" ></p:inputText>
+                            <p:inputText value="#{clientController.searchingPassportNo}" placeholder="Eg- 1103/02" autocomplete="off" ></p:inputText>
                             <p:commandButton ajax="false" class="m-1" value="Search" action="#{clientController.searchByPassportNo()}" ></p:commandButton>
                             
                             
@@ -44,9 +52,7 @@
                             <p:inputText value="#{clientController.searchingLocalReferanceNo}"  autocomplete="off" ></p:inputText>
                             <p:commandButton ajax="false" class="m-1" value="Search" action="#{clientController.searchByLocalReferanceNo()}" ></p:commandButton>
                             
-                            <p:outputLabel value="Student Number" ></p:outputLabel>
-                            <p:inputText value="#{clientController.searchingSsNumber}"  autocomplete="off" ></p:inputText>
-                            <p:commandButton ajax="false" class="m-1" value="Search" action="#{clientController.searchBySsNo()}" ></p:commandButton>
+
                             
                             <p:commandButton ajax="false" class="m-1" value="Search By ID - Priority" action="#{clientController.searchById()}" ></p:commandButton>
                             <p:commandButton ajax="false" class="m-1" value="Search By Any ID" action="#{clientController.searchByAllId()}" ></p:commandButton>

@@ -72,13 +72,12 @@
                                     <f:convertDateTime pattern="dd MMMM yyyy" ></f:convertDateTime>
                                 </h:outputLabel>
 
-                                <h:outputLabel value="Phone 1" ></h:outputLabel>
+                                <h:outputLabel value="Phone Number" ></h:outputLabel>
                                 <h:outputLabel value="#{clientController.selected.person.phone1}" ></h:outputLabel>
 
-                                <h:outputLabel value="Phone 2" ></h:outputLabel>
-                                <h:outputLabel value="#{clientController.selected.person.phone2}" ></h:outputLabel>
 
-                                <h:outputLabel value="Local Ref. No." ></h:outputLabel>
+
+                                <h:outputLabel value="Patient Number" ></h:outputLabel>
                                 <h:outputLabel value="#{clientController.selected.person.localReferanceNo}" ></h:outputLabel>
 
                                 <h:outputLabel value="Student Number" ></h:outputLabel>
@@ -105,7 +104,7 @@
                                         <p:commandButton 
                                             ajax="false"
                                             action="#{clientEncounterComponentFormSetController.fillAllEncountersFormSetsOfSelectedClient('Clinic_Visit')}"
-                                            class="small-box-footer" value="To View All Clinic Visits" >
+                                            class="small-box-footer" value="To View All Clerking" >
                                         </p:commandButton>
                                     </f:facet>
                                     <p:column headerText="Date" >
@@ -124,15 +123,15 @@
                             <h:form>
                                 <p:dataTable id="tblClinics" value="#{clientController.selectedClientsClinics}" var="chlce" >
                                     <f:facet name="header" id="tab_head">
-                                        Current Clinics                                        
+                                        Current Clerking                                        
                                     </f:facet>
-                                    <p:column headerText="Clinic" >
+                                    <p:column headerText="Department" >
                                         <p:outputLabel value="#{chlce.institution.name}" ></p:outputLabel>
                                     </p:column>
                                     <p:column headerText="Number" >
                                         <p:outputLabel value="#{chlce.encounterNumber}" ></p:outputLabel>
                                     </p:column>
-                                    <p:column headerText="Fill New Encounter" >
+                                    <p:column headerText="Clerking Setup" >
                                         <h:panelGroup rendered="#{chlce.institution eq webUserController.loggedUser.institution or 
                                                                   chlce.institution.parent eq webUserController.loggedUser.institution  or 
                                                                   chlce.institution.parent.parent eq webUserController.loggedUser.institution}" >
@@ -166,9 +165,9 @@
 
                                 <p:panelGrid columns="4" style="width: 100%;">
                                     <f:facet name="header">
-                                        <h:outputLabel value="Enroll in a New Clinic" ></h:outputLabel>                                    
+                                        <h:outputLabel value="Enroll for Clerking" ></h:outputLabel>                                    
                                     </f:facet>
-                                    <h:outputLabel value="Clinic" ></h:outputLabel>
+                                    <h:outputLabel value="Department" ></h:outputLabel>
 
                                     <h:panelGroup >
                                         <h:selectOneMenu value="#{clientController.selectedClinic}" 

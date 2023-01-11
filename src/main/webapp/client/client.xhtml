@@ -187,8 +187,8 @@
                                 </div>
 
                                 <div class="col-md-2" >
-                                    <p:outputLabel value="Patient Number" for="passportNumber" />
-                                    <p:inputText id="passportNumber"  
+                                    <p:outputLabel value="Patient Number(Your student number+ clerked patient no)" for="passportNumber" />
+                                    <p:inputText id="passportNumber"  placeholder="Eg- 1103/02"
                                                  class="w-100"
                                                  autocomplete="off" value="#{clientController.selected.person.passportNumber}" title="PassportNumber" />
 
@@ -196,9 +196,9 @@
                                 </div>
 
                                 <div class="col-md-2" >
-                                    <p:outputLabel value="Student Number" for="ssNumber" />
+                                    <p:outputLabel value="Your Student Number" for="ssNumber" />
                                     <h:panelGroup >
-                                        <p:inputText id="ssNumber"  
+                                        <p:inputText id="ssNumber"  placeholder="Eg- MFC/2019/1103"
                                                      autocomplete="off"  
                                                      value="#{clientController.selected.person.ssNumber}" 
                                                      title="Student Number"
@@ -211,7 +211,7 @@
 
                                 <div class="col-md-2" >
                                     <p:outputLabel value="Your Clinical Group Number" for="drivingLicenseNumber" />
-                                    <p:inputText id="drivingLicenseNumber" 
+                                    <p:inputText id="drivingLicenseNumber" placeholder="Eg- 2019/08"
                                                  class="w-100"
                                                  autocomplete="off"  value="#{clientController.selected.person.drivingLicenseNumber}" title="DrivingLicenseNumber" />
 
@@ -237,7 +237,7 @@
                                     <p:autoComplete id="gn" value="#{clientController.selected.person.gnArea}"
                                                     completeMethod="#{clientController.completeClientsGnArea}"
                                                     var="gn" itemLabel="#{gn.name}" itemValue="#{gn}"
-                                                    maxResults="15" forceSelection="true" placeholder="Not Known"
+                                                    maxResults="15" forceSelection="true" 
                                                     minQueryLength="3">
                                         <p:column headerText="Name">
                                             <p:outputLabel value="#{gn.name}"></p:outputLabel>
